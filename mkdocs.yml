@@ -1,0 +1,50 @@
+# Project Information
+site_name: 轻牛WSP服务器
+site_url: https://YolandaQingniu.github.io/wsp
+site_author: 伊欧乐科技有限公司
+site_description: 伊欧乐轻牛WSP服务器接入文档
+
+# Repository
+repo_name: 轻牛WSP服务器指南
+repo_url: https://github.com/YolandaQingniu/qn_wsp_server_doc
+
+# Copyright
+copyright: "Copyright &copy; 伊欧乐科技有限公司"
+
+# Configuration
+theme:
+  name: material
+  language: zh
+
+  palette:
+    primary: cyan
+
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+# Customization
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/runcobo/runcobo
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+
+nav:
+  - "简介": "index.md"
+  - "流程图": "flow.md"
+  - "Docker服务器":
+    - "部署": "docker/deploy_docker_server.md"
+    - "秤端请求接口": "docker/api.md"
+  - "第三方服务器":
+    - "部署": "third_server/deploy_third_server.md"
+    - "Docker请求接口": "third_server/request_by_docker.md"
+    - "APP请求接口": "third_server/request_by_app.md"
+    - "APP请求接口说明": "third_server/request_by_app_doc.md"
