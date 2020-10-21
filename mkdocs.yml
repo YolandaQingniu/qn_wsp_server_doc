@@ -43,6 +43,7 @@ nav:
   - "Docker服务器":
     - "部署": "docker/deploy_docker_server.md"
     - "秤端请求接口": "docker/api.md"
+    - "变更日志": "docker/changelog.md"
   - "第三方服务器":
     - "部署": "third_server/deploy_third_server.md"
     - "Docker请求接口": "third_server/request_by_docker.md"
