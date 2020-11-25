@@ -5,7 +5,7 @@
 ## 读取镜像
 `vim Dockerfile`
 ```Dockerfile
-FROM registry.cn-shenzhen.aliyuncs.com/yolanda/wsp_open:v1.0.7
+FROM registry.cn-shenzhen.aliyuncs.com/yolanda/wsp_open:v1.0.9
 ```
 
 ## 配置环境变量

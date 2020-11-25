@@ -4,4 +4,4 @@
 
 伊欧乐WSP分为服务器SDK与APP SDK. 本文档为服务器SDK.
 
-当前Docker版本为1.0.7
+当前Docker版本为1.0.9
