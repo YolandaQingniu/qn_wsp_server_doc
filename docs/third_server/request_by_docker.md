@@ -42,6 +42,30 @@
 |├─ user_key|integer|必须|用户密钥(1000-9999)|mock: 1234|
 |unit|integer|必须|单位 1 kg 2 lb 4 斤|mock: 1|
 
+#### (客户定制)读取BOW秤端用户
+
+接口地址: `POST /wsp/read_bow_scale_users`
+
+请求参数:
+
+|名称|类型|是否必须|备注|其他信息|
+|--- |--- |--- |--- |--- |
+|mac|string|必须|Mac地址|mock: 12:34:56:78:9A:BC|
+|battery_level|string|必须|电量 0-不支持电量 1-低电量 2-工作电量 4-满电量|mock: 1|
+
+返回数据:
+
+|名称|类型|是否必须|备注|其他信息|
+|--- |--- |--- |--- |--- |
+|scale_users|object []|必须|秤端用户数组(数组可为空数组)|item 类型: object|
+|├─ user_index|integer|必须|用户索引(1-8)|mock: 2|
+|├─ gender|integer|必须|性别(0为女 1为男)|mock: 1|
+|├─ height|number|必须|身高(单位厘米, 保留一位小数)|mock: 180.5|
+|├─ birthday|string|必须|生日(YYYY-mm-dd格式)|mock: 1990-01-01|
+|├─ user_key|integer|必须|用户密钥(1000-9999)|mock: 1234|
+|unit|integer|必须|单位 1 kg 2 lb 4 斤|mock: 1|
+|ctrl|integer|必须|为1显示指标, 为0不显示 # Bit0->用户名 Bit1->BMI Bit2->骨量 Bit3->体脂率 Bit4->肌肉量 Bit5->体水分 Bit6->心率 Bit7->天气 Bit8->重量趋势|mock: 511|
+
 #### 读取Ota版本
 
 接口地址: `POST /wsp/read_ota_versions`
