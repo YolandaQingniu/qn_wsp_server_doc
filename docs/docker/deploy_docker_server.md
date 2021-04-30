@@ -5,23 +5,19 @@
 ## 读取镜像
 `vim Dockerfile`
 ```Dockerfile
-FROM registry.cn-shenzhen.aliyuncs.com/yolanda/wsp_open:v1.0.10
+FROM registry.cn-shenzhen.aliyuncs.com/yolanda/wsp_open:v1.0.11
 ```
 
 ## 配置环境变量
+WSP_DOMAIN为三方服务器访问地址, 注意不要有空格
+
 `vim main.env`
 ```
-WSP_DOMAIN=http://wsp-demo.yolanda.hk         # [必填项] 第三方服务器地址
-AUTHORIZATION="Basic ZHVtbXk6MTIzNDU2Nzg="    # [选填项] 验签头部, 默认为空
-CUSTOM_OTA_SERVER=http://wsp-demo.yolanda.hk  # [选填项] 自定义OTA服务器, 默认Yolanda自带的OTA升级
-CUSTOM_ALGORITHM=01                           # [选填项] 自定义算法, 默认01
-PORT=3000                                     # [选填项] 服务器监听端口, 默认3000
-TZ=Asia/Shanghai                              # [选填项] 服务器时区, 默认Asia/Shanghai
+WSP_DOMAIN=https://abc.com
 ```
 
 ## 启动容器
 ```shell
 docker build . -t wsp_server
-docker run --env-file main.env wsp_server
-# docker run --env-file main.env wsp_server -d # 后台启动
+docker run -p 3000:3000 --env-file main.env wsp_server
 ```
